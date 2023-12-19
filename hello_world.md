@@ -39,6 +39,8 @@ The key's randomart image is:
 Теперь необходимо добавить ключ в используемые ключи:
 ```sh
 ssh-add /c/Users/Даниил/.ssh/id_ed25519
+либо
+ssh -i /c/Users/Даниил/.ssh/id_ed25519 возможно последнее нужно будет заключить в кавычки
 ```
 Если использовали пароль то запросит пароль:
 ```sh
@@ -59,6 +61,13 @@ clip < /c/Users/Даниил/.ssh/id_ed25519.pub
 2. Github подскажет какие команды нужно ввести их всего 3:
 ```sh
 git remote add origin https://github.com/gerelDan/test_git_3.git
+git branch -M main
+git push -u origin main
+```
+Возможно это не поможет тогда делаем так:
+```sh
+git remote add origin git@github.com:gerelDan/test_git_3.git
+git remote set-url origin git@github.com:gerelDan/test_git_3.git
 git branch -M main
 git push -u origin main
 ```
